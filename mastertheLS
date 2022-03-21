@@ -1,2 +1,2 @@
-ls -lAtmFb |tr '\n' ','
+ls -lAtmF | tr -d "[:space:]"
 
