@@ -1,1 +1,1 @@
-find -name "*sh" | tr -d ".sh" | tr -d "/" | sort -nr
+find -name "*sh" | tr -d './'
