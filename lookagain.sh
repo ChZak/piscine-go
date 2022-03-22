@@ -1,1 +1,1 @@
-find . -name "*.sh" -print | sed 's/.sh//' | sed 's/.\///' | sort -r | sed 's!.*/!!' 
+find . -name "*.sh" -print | sed 's/.\///' | sort -r | sed 's!.*/!!'  | sed "s/.*\///; s/\.sh//"
