@@ -1,1 +1,1 @@
-find -name "*sh" | sed 's/.sh//' | tr -d './'
+find -name "*sh" | sed 's/.sh//' | sed 's/..//'
