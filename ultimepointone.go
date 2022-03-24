@@ -1,7 +1,5 @@
-package main
+package piscine
 
-import "fmt"
-
-func main() {
-	fmt.Println("ok")
+func UltimatePointOne(n ***int) {
+	***n = 1
 }
