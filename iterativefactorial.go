@@ -10,6 +10,6 @@ func IterativeFactorial(nb int) int {
 		for i := 1; i <= nb; i++ {
 			f = f * i
 		}
+		return f
 	}
-	return f
 }
