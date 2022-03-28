@@ -7,11 +7,11 @@ func IterativeFactorial(nb int) int {
 		return 1
 	} else {
 		res := 1
-		for i := 1; i < nb+1; i++ {
+		for i := 1; i <= nb; i++ {
 			res *= i
-			/*if res > 2147483647 {
+			if res > 2147483647 {
 				return 0
-			}*/
+			}
 		}
 		return res
 	}
