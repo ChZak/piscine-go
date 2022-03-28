@@ -9,10 +9,9 @@ func IterativeFactorial(nb int) int {
 		res := 1
 		for i := 1; i < nb+1; i++ {
 			res *= i
-			if res > 2147483647 {
-				res = 0
-				break
-			}
+			/*if res > 2147483647 {
+				return 0
+			}*/
 		}
 		return res
 	}
