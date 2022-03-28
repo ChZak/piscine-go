@@ -10,7 +10,8 @@ func IterativeFactorial(nb int) int {
 		for i := 1; i < nb+1; i++ {
 			f = f * i
 			if f > 2147483647 {
-				return 0
+				f = 0
+				break
 			}
 		}
 		return f
