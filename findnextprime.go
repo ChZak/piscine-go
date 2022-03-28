@@ -1,13 +1,11 @@
 package piscine
 
-import "piscine"
-
 func FindNextPrime(nb int) int {
-	if piscine.IsPrime(nb) == true {
+	if IsPrime(nb) {
 		return nb
 	} else {
 		n := nb + 1
-		for piscine.IsPrime(n) == false {
+		for !IsPrime(n) {
 			n++
 		}
 		return n
