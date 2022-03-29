@@ -2,7 +2,7 @@ package piscine
 
 func AlphaCount(s string) int {
 	myS := []rune(s)
-	count := 0
+	count := 1
 	for i := 0; i < StrLen(s); i++ {
 		if myS[i] >= 41 && myS[i] <= 90 {
 			count += 1
@@ -12,5 +12,5 @@ func AlphaCount(s string) int {
 			count -= 1
 		}
 	}
-	return count + 1
+	return count
 }
