@@ -2,8 +2,8 @@ package piscine
 
 func IsAlpha(s string) bool {
 	str := []rune(s)
-	for i := 0; i < len(str); i++ {
-		if str[i] < 33 || str[i] > 126 {
+	for r := 0; r < len(str); r++ {
+		if (str[r] < 'a' || str[r] > 'z') && (str[r] < 'A' || str[r] > 'Z') && (str[r] < '0' || str[r] > '9') {
 			return false
 		}
 	}
