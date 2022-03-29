@@ -1,13 +1,23 @@
 package piscine
 
 func Index(s string, toFind string) int {
-	for i := 0; i < len(s); i++ {
-		for j := 0; j < len(toFind); j++ {
-			if s[i] == toFind[j] {
-				if Compare(s, toFind)+1 == 0 {
-					return i
-				}
+	length := len(s)
+	sublength := len(toFind)
+
+	t := 0
+	for i := 0; i < length; i++ {
+		j := 0
+		t = i
+		for j < sublength {
+			if t < length && s[t] == toFind[j] {
+				j++
+				t++
+			} else {
+				break
 			}
+		}
+		if j == sublength {
+			return i
 		}
 	}
 	return -1
