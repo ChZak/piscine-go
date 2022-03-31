@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func check(a rune) bool {
 	if (a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z') || (a >= '0' && a <= '9') {
@@ -12,14 +12,14 @@ func Capitalize(s string) string {
 	first := true
 
 	for i := range runes {
-		if check(runes[i]) == true && first {
+		if check(runes[i]) && first {
 			if runes[i] >= 'a' && runes[i] <= 'z' {
 				runes[i] -= 32
 			}
 			first = false
 		} else if runes[i] >= 'A' && runes[i] <= 'Z' {
 			runes[i] += 32
-		} else if check(runes[i]) == false {
+		} else if !check(runes[i]) {
 			first = true
 		}
 	}
