@@ -8,8 +8,12 @@ import (
 
 func main() {
 	name := []rune(os.Args[0])
-	for i := range name {
-		z01.PrintRune(name[i])
+	for i := 0; i < len(name); i++ {
+		if name[i] == '.' || name[i] == '/' {
+			i++
+		} else {
+			z01.PrintRune(name[i])
+		}
 	}
 	z01.PrintRune('\n')
 }
