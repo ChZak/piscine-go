@@ -11,9 +11,7 @@ func main() {
 	for i := 1; i < len(args); i++ {
 		runes := []rune(args[i])
 		for j := 0; j < len(runes); j++ {
-			if runes[j] > '0' {
-				z01.PrintRune(runes[j])
-			}
+			z01.PrintRune(runes[j])
 		}
 		z01.PrintRune('\n')
 	}
