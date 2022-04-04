@@ -28,13 +28,16 @@ func main() {
 	EvenMsg := "I have an even number of arguments"
 	OddMsg := "I have an odd number of arguments"
 	args := os.Args[1:] // Recupère les argmuent sauf le nom du fichier
+	length := 0
 
 	// Compte le nombre d'arguments
-	for i := range args {
-		if isEven(i) {
-			printStr(EvenMsg)
-		} else {
-			printStr(OddMsg)
-		}
+	for range args {
+		length++
+	}
+
+	if isEven(length) {
+		printStr(EvenMsg)
+	} else {
+		printStr(OddMsg)
 	}
 }
